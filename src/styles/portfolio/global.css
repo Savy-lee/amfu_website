@@ -1,0 +1,6 @@
+/* Shared portfolio layout and typography. */
+.portfolio-section { padding: 96px 0; }
+.section-eyebrow { letter-spacing: .14em; font-weight: 800; }
+.section-title { font-size: clamp(2.3rem, 5vw, 3.6rem) !important; margin: 8px 0 48px !important; max-width: 700px; }
+.body-copy { line-height: 1.9 !important; margin: 16px 0 !important; }
+@media (max-width: 768px) { .portfolio-section { padding: 64px 0; } }

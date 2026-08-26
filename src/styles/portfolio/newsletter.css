@@ -1,0 +1,2 @@
+.newsletter-form { display: flex; gap: 16px; max-width: 620px; flex-wrap: wrap; }
+.newsletter-form .MuiTextField-root { flex: 1; min-width: 240px; }

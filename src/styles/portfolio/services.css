@@ -1,0 +1,6 @@
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card { padding: 24px; min-height: 140px; transition: .25s; }
+.service-card:hover { border-color: #ee765c; transform: translateY(-5px); }
+.service-card h6 { margin: 16px 0 8px; }
+@media (max-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
