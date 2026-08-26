@@ -12,17 +12,17 @@ import Journey from "./Journey";
 import Contact from "./Contact";
 import Newsletter from "./Newsletter";
 import Footer from "./Footer";
-import "../../styles/portfolio/global.css";
-import "../../styles/portfolio/header.css";
-import "../../styles/portfolio/hero.css";
-import "../../styles/portfolio/about.css";
-import "../../styles/portfolio/services.css";
-import "../../styles/portfolio/skills.css";
-import "../../styles/portfolio/projects.css";
-import "../../styles/portfolio/journey.css";
-import "../../styles/portfolio/contact.css";
-import "../../styles/portfolio/newsletter.css";
-import "../../styles/portfolio/footer.css";
+import "@/styles/portfolio/global.css";
+import "@/styles/portfolio/header.css";
+import "@/styles/portfolio/hero.css";
+import "@/styles/portfolio/about.css";
+import "@/styles/portfolio/services.css";
+import "@/styles/portfolio/skills.css";
+import "@/styles/portfolio/projects.css";
+import "@/styles/portfolio/journey.css";
+import "@/styles/portfolio/contact.css";
+import "@/styles/portfolio/newsletter.css";
+import "@/styles/portfolio/footer.css";
 
 export default function Portfolio() {
   const [dark, setDark] = useState(false);
