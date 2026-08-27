@@ -1,0 +1,5 @@
+.skills-band { background: #e5f1ed; }
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.skill-card { padding: 32px; }
+.skill-card .MuiLinearProgress-root { height: 7px; border-radius: 4px; }
+@media (max-width: 768px) { .skills-grid { grid-template-columns: 1fr; } }

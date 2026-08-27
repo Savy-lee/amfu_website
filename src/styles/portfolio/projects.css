@@ -1,0 +1,9 @@
+.project-filters { margin-bottom: 32px; flex-wrap: wrap; }
+.project-filters button { border-radius: 20px; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.project-card { overflow: hidden; display: flex; flex-direction: column; }
+.project-card > img { width: 100%; height: 220px; object-fit: cover; }
+.project-content { padding: 24px; flex: 1; }
+.project-content h5 { margin: 8px 0 0; }
+.project-tags { margin-top: 16px; flex-wrap: wrap; }
+@media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }

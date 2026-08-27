@@ -1,0 +1,3 @@
+.contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: start; }
+.contact-form { display: grid; gap: 16px; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
