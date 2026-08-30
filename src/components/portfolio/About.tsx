@@ -1,4 +1,34 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import Section from "./Section";
-export default function About() { return <Section id="about" eyebrow="A little context" title="Technology should feel human."><Box className="about-grid"><Box component="img" src="/portfolio/images/LABANON_ID_PHOTO.png" alt="Jhon Rey Labanon" className="profile-image" /><Box><Typography variant="h3">Hello, I&apos;m Jhon Rey.</Typography><Typography color="text.secondary" className="body-copy">I&apos;m a 4th-year IT student from Rizal Technological University who believes in creating technology that serves people. My journey started with curiosity and has evolved into a mission to build tools that make everyday life easier.</Typography><Typography color="text.secondary" className="body-copy">When I&apos;m not coding, you&apos;ll find me designing user interfaces, creating educational content, or brainstorming ways to improve local government processes through technology.</Typography><Stack spacing={1} className="personal-info">{[["Location", "Paranaque City, Metro Manila"], ["Education", "BS Information Technology, Rizal Technological University"], ["Status", "Available for Internship (January 2026)"]].map(([label, value]) => <Typography key={label} variant="body2"><b>{label}:</b> {value}</Typography>)}</Stack><Button variant="contained" href="/portfolio/files/CV_LABANON_JHON_REY_D.pdf" download startIcon={<DownloadIcon />}>Download CV</Button></Box></Box></Section>; }
+import type { PortfolioAbout } from "../../../lib/actions/portfolio";
+
+export default function About({ about }: { about: PortfolioAbout }) {
+  return (
+    <Section id="about" eyebrow="A little context" title={about.title}>
+      <Box className="about-grid">
+        <Box component="img" src={about.image} alt={about.intro} className="profile-image" />
+
+        <Box>
+          <Typography variant="h3">{about.intro}</Typography>
+
+          <Typography color="text.secondary" className="body-copy">
+            {about.description}
+          </Typography>
+
+          <Stack spacing={1} className="personal-info">
+            {about.personalInfo.map(([label, value]) => (
+              <Typography key={label} variant="body2">
+                <b>{label}:</b> {value}
+              </Typography>
+            ))}
+          </Stack>
+
+          <Button variant="contained" href={about.cvUrl} download startIcon={<DownloadIcon />}>
+            Download CV
+          </Button>
+        </Box>
+      </Box>
+    </Section>
+  );
+}

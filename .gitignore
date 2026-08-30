@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#prisma
+/generated/
+/generated/prisma
+
+# editor / tooling / local generated folders
+.agents/
+.claude/
+.windsurf/
+.vscode/
+.next/
+
+# other local noise
+node_modules/

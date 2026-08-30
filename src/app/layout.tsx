@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jhon Rey Labanon | IT Student & Web Developer",
   description: "Portfolio of Jhon Rey D. Labanon, an IT student and web developer.",
+  icons: {
+    icon: "/portfolio/images/JRL-DEV-LOGO.png",
+  },
 };
 
 type RootLayoutProps = {
