@@ -1,7 +1,7 @@
-.portfolio-header { border-bottom: 1px solid rgba(24,34,48,.12); }
+.portfolio-header { border-bottom: 1px solid var(--surface-line); }
 .portfolio-header .MuiToolbar-root { min-height: 76px; }
-.portfolio-logo { color: #213b63; font-weight: 900; text-decoration: none; margin-right: auto; }
-.portfolio-logo span, .portfolio-footer span { color: #ee765c; }
-.desktop-nav button { text-transform: capitalize; font-weight: 600; }
-.mobile-nav-button { display: none !important; }
+.portfolio-logo { color: var(--brand); font-weight: 900; text-decoration: none; margin-right: auto; }
+.portfolio-logo span, .portfolio-footer span { color: var(--accent); }
+.desktop-nav button { text-transform: capitalize; font-weight: 600; color: var(--page-text); }
+.mobile-nav-button { display: none !important; color: var(--page-text); }
 @media (max-width: 768px) { .desktop-nav { display: none !important; } .mobile-nav-button { display: inline-flex !important; } }

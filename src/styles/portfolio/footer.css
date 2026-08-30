@@ -1,2 +1,2 @@
 .portfolio-footer { padding: 40px 0; }
-.portfolio-footer span { color: #ee765c; }
+.portfolio-footer span { color: var(--accent); }

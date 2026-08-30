@@ -1,2 +1,37 @@
 import { Box, Container, Link, Stack, Typography } from "@mui/material";
-export default function Footer() { return <Box component="footer" className="portfolio-footer"><Container maxWidth="lg"><Stack direction={{ xs: "column", sm: "row" }} sx={{ justifyContent: "space-between", gap: 2 }}><Box><Typography variant="h6">Jhon Rey Labanon<span>.</span></Typography><Typography variant="body2" color="text.secondary">IT student & web developer</Typography><Stack direction="row" spacing={2} sx={{ mt: 2 }}><Link href="#contact">LinkedIn</Link><Link href="#contact">GitHub</Link><Link href="#contact">Facebook</Link><Link href="#contact">Twitter</Link></Stack></Box><Typography variant="body2" color="text.secondary">© 2026 Jhon Rey D. Labanon</Typography></Stack></Container></Box>; }
+import type { PortfolioFooter } from "../../../lib/actions/portfolio";
+
+export default function Footer({ footer }: { footer: PortfolioFooter }) {
+  return (
+    <Box component="footer" className="portfolio-footer">
+      <Container maxWidth="lg">
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          sx={{ justifyContent: "space-between", gap: 2 }}
+        >
+          <Box>
+            <Typography variant="h6">
+              {footer.name}
+              <span>.</span>
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {footer.subtitle}
+            </Typography>
+
+            <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
+              {footer.socialLinks.map((link) => (
+                <Link key={link.label} href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </Stack>
+          </Box>
+
+          <Typography variant="body2" color="text.secondary">
+            {footer.copyright}
+          </Typography>
+        </Stack>
+      </Container>
+    </Box>
+  );
+}
