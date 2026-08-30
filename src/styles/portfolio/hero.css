@@ -1,4 +1,4 @@
-.portfolio-hero { background: #213b63; color: white; min-height: 570px; display: flex; align-items: center; position: relative; overflow: hidden; }
+.portfolio-hero { background: var(--hero-bg); color: white; min-height: 570px; display: flex; align-items: center; position: relative; overflow: hidden; }
 .portfolio-hero:after { content: ""; position: absolute; width: 420px; height: 420px; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; right: 80px; top: -140px; }
 .portfolio-hero h1 { font-size: clamp(3rem, 9vw, 5.8rem); line-height: .98; }
 .portfolio-hero h1 span { color: #75d5c7; }

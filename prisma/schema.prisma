@@ -1,0 +1,117 @@
+// This is your Prisma schema file.
+// It is aligned to the actual portfolio data model used in the app.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Users {
+  id                    Int      @id @default(autoincrement())
+  name                  String
+  email                 String   @unique
+  password              String
+  role                  String   @default("user")
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  Projects              Projects []
+  AboutSections         AboutSections[]
+  SkillGroups           SkillGroups[]
+  Services              Services[]
+  JourneyEntrys         JourneyEntrys[]
+  NewsletterSubscribers NewsletterSubscribers[]
+  FooterInfos           FooterInfos[]
+  ContactMessages       ContactMessages[]
+
+}
+
+model AboutSections {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}
+
+model ContactMessages {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}
+
+model Projects {
+  id            Int      @id @default(autoincrement())
+  title         String
+  category      String
+  categoryLabel String
+  meta          String
+  description   String
+  image         String
+  tags          Json
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  users_id      Int
+  users         Users @relation(fields: [users_id], references: [id])
+}
+
+model SkillGroups {
+  id        Int      @id @default(autoincrement())
+  title     String
+  items     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}
+
+model Services {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}
+
+model JourneyEntrys {
+  id          Int      @id @default(autoincrement())
+  period      String
+  title       String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}
+
+model NewsletterSubscribers {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}
+
+model FooterInfos {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  users_id    Int
+  users     Users @relation(fields: [users_id], references: [id])
+}

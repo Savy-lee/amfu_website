@@ -1,4 +1,4 @@
-.skills-band { background: #e5f1ed; }
+.skills-band { background: var(--surface-alt); }
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .skill-card { padding: 32px; }
 .skill-card .MuiLinearProgress-root { height: 7px; border-radius: 4px; }
