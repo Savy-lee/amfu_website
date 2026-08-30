@@ -45,10 +45,6 @@ next-env.d.ts
 /generated/prisma
 
 # editor / tooling / local generated folders
-.agents/
-.claude/
-.windsurf/
-.vscode/
 .next/
 
 # other local noise
