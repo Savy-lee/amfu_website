@@ -40,11 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# IDE & AI Assistant config
-.vscode/
-.agents/
-.claude/
-.windsurf/
-
-# Prisma generated outputs
-/generated/
+#prisma
+/generated/prisma
+.agents
+.claude
+.next
+.vscode
+.windsurf
