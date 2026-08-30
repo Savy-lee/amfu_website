@@ -53,3 +53,11 @@ next-env.d.ts
 
 # other local noise
 node_modules/
+
+#prisma
+/generated/prisma
+.agents
+.claude
+.next
+.vscode
+.windsurf
