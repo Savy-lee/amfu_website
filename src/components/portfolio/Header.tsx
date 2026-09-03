@@ -44,7 +44,11 @@ export default function Header({
         </Stack>
 
         <Tooltip title="Toggle theme">
-          <IconButton onClick={onThemeChange} color="primary">
+          <IconButton
+            onClick={onThemeChange}
+            color="primary"
+            aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
+          >
             {dark ? <LightModeIcon /> : <DarkModeIcon />}
           </IconButton>
         </Tooltip>

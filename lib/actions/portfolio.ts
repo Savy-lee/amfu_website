@@ -195,7 +195,7 @@ export async function getPortfolioData(): Promise<PortfolioData> {
       { label: "LinkedIn", href: "https://www.linkedin.com/in/jhon-rey-labanon-39aa653a6/" },
       { label: "GitHub", href: "https://github.com/Savy-lee" },
       { label: "Facebook", href: "https://www.facebook.com/jhonrey.labanon.7" },
-      { label: "Twitter", href: "#contact" },
+      { label: "Twitter", href: "https://twitter.com" },
     ],
     copyright: `© 2026 ${profileName}`,
   };

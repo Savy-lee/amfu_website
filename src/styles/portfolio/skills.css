@@ -1,5 +1,32 @@
-.skills-band { background: var(--surface-alt); }
-.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.skill-card { padding: 32px; }
-.skill-card .MuiLinearProgress-root { height: 7px; border-radius: 4px; }
-@media (max-width: 768px) { .skills-grid { grid-template-columns: 1fr; } }
+.skills-band {
+	background: var(--surface-alt);
+	color: var(--page-text);
+}
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+}
+
+.skill-card {
+	padding: 32px;
+	background: var(--surface);
+	color: var(--page-text);
+}
+
+.skill-card .MuiLinearProgress-root {
+	height: 7px;
+	border-radius: 4px;
+	background-color: var(--surface-line);
+}
+
+.skill-card .MuiLinearProgress-bar {
+	background-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+	.skills-grid {
+		grid-template-columns: 1fr;
+	}
+}

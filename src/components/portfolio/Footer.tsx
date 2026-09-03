@@ -7,7 +7,11 @@ export default function Footer({ footer }: { footer: PortfolioFooter }) {
       <Container maxWidth="lg">
         <Stack
           direction={{ xs: "column", sm: "row" }}
-          sx={{ justifyContent: "space-between", gap: 2 }}
+          sx={{
+            justifyContent: "space-between",
+            alignItems: { xs: "flex-start", sm: "flex-end" },
+            gap: 2,
+          }}
         >
           <Box>
             <Typography variant="h6">
@@ -20,7 +24,7 @@ export default function Footer({ footer }: { footer: PortfolioFooter }) {
 
             <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
               {footer.socialLinks.map((link) => (
-                <Link key={link.label} href={link.href}>
+                <Link key={link.label} href={link.href} target="_blank" rel="noreferrer">
                   {link.label}
                 </Link>
               ))}
