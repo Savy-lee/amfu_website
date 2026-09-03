@@ -114,7 +114,7 @@ export default function Portfolio({ data }: { data: PortfolioData }) {
 
           <DialogContent>
             {message === "newsletter"
-              ? "Thanks for subscribing. You will received project updates and tech insights."
+              ? "Thanks for subscribing. You'll receive project updates and tech insights."
               : "Thanks for reaching out. I will get back to you soon."}
           </DialogContent>
 
